@@ -25,8 +25,8 @@ Run the query scripts in the following order in TigerGraph GraphStudio Write Que
 >> Data/  
 >>> loadVertexData[1].gsql
 
->> Queries/
->>> determineHRA[1].gsql 
+>> Queries/[^2]
+>>> determineHRA[1].gsql  
     calculateBodyMass[2].gsql  
     determineSmoker[3].gsql  
     determineDibetic[4].gsql  
@@ -35,7 +35,7 @@ Run the query scripts in the following order in TigerGraph GraphStudio Write Que
     determineBloodPressure[7].gsql  
     determineRisk[8].gsql  
     initializeGraph.gsql  
-
+[^2]: If you include '[integer]' as part of the query file name, Cheetah will load those files by the sequential order.
 >>Schema/
 >>>defineSchema.gsql  
 
