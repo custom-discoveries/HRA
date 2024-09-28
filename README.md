@@ -14,7 +14,7 @@ The src/ directory contains 3 python programs.
 ## Install and Run
 ### Setup Environment
 - Run the installPythonEnvironment.sh first
-  - To run the script runDataProfiler.sh requires Python Virtural Environment **version=3.10**
+  - At time time, to run the script runDataProfiler.sh requires Python Virtural Environment **version=3.10** or lower
   - **Please NOTE**: You will need to rerun the **installPythonEnvironment.sh** script each time you open up a new terminal session!
 ### Install
 To install this TigerGraph demo, clone this repository at a terminal command prompt: 
