@@ -1,7 +1,5 @@
 #
 DROP JOB ALL
-DROP GRAPH HRA_Graph
-CREATE GRAPH HRA_Graph(*)
 USE Graph HRA_Graph
 set exit_on_error = "false"
 #
