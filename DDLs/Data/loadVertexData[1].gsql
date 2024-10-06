@@ -1,8 +1,11 @@
 #
+# Copyright (c) 2024, Custom Discoveries Inc.
+# All rights reserved.
+#
+#
 # Example of loading Vertex from one data load file
 #
 Use Graph HRA_Graph
-DROP JOB HRA_Graph_Vertex_Job
 CREATE LOADING JOB  HRA_Graph_Vertex_Job FOR GRAPH  HRA_Graph {
 DEFINE FILENAME DS0 = "./GraphData/PersonProfiles.csv";
 #DEFINE FILENAME DS1 = "./GraphData/BodyMass-Index.csv";

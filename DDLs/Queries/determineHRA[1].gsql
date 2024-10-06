@@ -1,10 +1,14 @@
-CREATE QUERY determineHRA(VERTEX<HRA> hra) { 
+CREATE QUERY determineHRA(VERTEX<HRA> hra) {
+/**
+ Copyright (c) 2024, Custom Discoveries Inc.
+ All rights reserved.
+**/
 
   Start = {Person.*};
-  
+
   PRS = SELECT p from Start:p WHERE p.id == hra.id
   POST-ACCUM
     INSERT INTO hasHRA VALUES(p.id,hra.id,"HRA");
-  
-  PRINT "Estiblished Person to HRA edge..."; 
+
+  PRINT "Estiblished Person to HRA edge...";
 }

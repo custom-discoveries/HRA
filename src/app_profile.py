@@ -1,9 +1,14 @@
+#**************************************************************************************
+# Copyright (c) 2024, Custom Discoveries Inc.
+# All rights reserved.
+# app_profile.py - This is a streamlit application that shows attributes of a data file
+#**************************************************************************************
 import os
 import sys
 import streamlit as st
 import pandas as pd
 from ydata_profiling import ProfileReport
-from streamlit_ydata_profiling import st_profile_report 
+from streamlit_ydata_profiling import st_profile_report
 
 
 SIZE_FILE_LIMIT=50
@@ -55,9 +60,9 @@ if uploaded_file is not None:
                 df = xl_file.parse(sheet_name)
 
             with st.spinner('Generating Report'):
-                pr = ProfileReport(df, 
-                                minimal= not detailed, 
-                                dark_mode=dark_mode, 
+                pr = ProfileReport(df,
+                                minimal= not detailed,
+                                dark_mode=dark_mode,
                                 orange_mode=orange_mode
                                 )
 

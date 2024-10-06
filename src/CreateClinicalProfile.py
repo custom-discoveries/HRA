@@ -1,3 +1,8 @@
+#**************************************************************************************
+# Copyright (c) 2024, Custom Discoveries Inc.
+# All rights reserved.
+# CreateClinicalProfile.py - This application generates random clinical profile of usrs
+#**************************************************************************************
 import random
 import pandas as pd
 
@@ -22,14 +27,14 @@ class ClinicalProfile:
             return False
         else:
             return True
-        
+
     def generate_fake_profile(self):
         data = []
         count=0
- 
+
         for _ in range(self.num_entries):
             count += 1
-            
+
             entry = {
                 "id": count,
                 "smokes": self.calculateSmoking(),
@@ -39,7 +44,7 @@ class ClinicalProfile:
                 "bloodPressure": self.calculateBloodPressure()
                 }
             data.append(entry)
-        
+
         return pd.DataFrame(data)
 
 if __name__ == "__main__":

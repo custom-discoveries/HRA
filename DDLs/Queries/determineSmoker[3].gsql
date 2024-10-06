@@ -1,5 +1,10 @@
 CREATE QUERY determineSmoker(VERTEX<HRA> hra) {
 /**
+ Copyright (c) 2024, Custom Discoveries Inc.
+ All rights reserved.
+**/
+
+/**
 * Build out Smoker Condition
 **/
   Start = {hra};

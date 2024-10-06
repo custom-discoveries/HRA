@@ -1,3 +1,9 @@
+#**************************************************************************************
+# Copyright (c) 2024, Custom Discoveries Inc.
+# All rights reserved.
+# DiseaseProfile.py - This application generates random Disease profile of usrs
+#**************************************************************************************
+
 import csv
 from faker import Faker
 from datetime import datetime
@@ -7,15 +13,15 @@ class GenderClassifier:
         self.filename = inputFilename
         self.output_filename = outputFilename
         self.fake = Faker()
-    
+
     def classify_gender(self):
         count = 0
-        fieldnames = ["ID","FirstName","LastName","Gender","Birthdate","Age","Disease","Fever","Cough","Fatigue","Difficulty Breathing","Blood Pressure","Cholesterol Level","Outcome Variable"]          
-        
+        fieldnames = ["ID","FirstName","LastName","Gender","Birthdate","Age","Disease","Fever","Cough","Fatigue","Difficulty Breathing","Blood Pressure","Cholesterol Level","Outcome Variable"]
+
         with open(self.filename, 'r') as csvfile, open(self.output_filename, 'w') as outputfile:
             reader = csv.DictReader(csvfile)
             writer = csv.DictWriter(outputfile,fieldnames=fieldnames)
-            writer.writeheader()  
+            writer.writeheader()
 
             for row in reader:
                 count += 1
@@ -24,14 +30,14 @@ class GenderClassifier:
                     firstName = self.fake.first_name_male()
                 elif gender == 'female':
                    firstName = self.fake.first_name_female()
-                
+
                 age = int(row['Age'])
                 birthdate = self.fake.date_of_birth(minimum_age=18, maximum_age=90)
                 month = birthdate.month
                 day = birthdate.day
                 if (month == 2 and day > 28):
                     day += -1
-                
+
                 try:
                     birthdate = datetime(year=datetime.now().year - age,
                                         month=birthdate.month,
@@ -46,7 +52,7 @@ class GenderClassifier:
                 row['Birthdate'] = birthdate
                 writer.writerow(row)
 
-        
+
         print(f"Number of records Processed: {count}")
 
 # Example usage:

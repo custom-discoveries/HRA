@@ -1,7 +1,12 @@
 CREATE QUERY determineRisk() {
-   /*
-    * Determine a Person's Risk
-    */
+/**
+ Copyright (c) 2024, Custom Discoveries Inc.
+ All rights reserved.
+**/
+
+/*
+ *  Determine a Person's Risk
+ */
 
   SumAccum<INT> @risks=0;
   /*

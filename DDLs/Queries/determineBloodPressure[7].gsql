@@ -1,5 +1,10 @@
 CREATE QUERY determineBloodPressure(VERTEX<HRA> hra) {
 /**
+ Copyright (c) 2024, Custom Discoveries Inc.
+ All rights reserved.
+**/
+
+/**
 * Build out BloodPressure Condition
 **/
   UINT state;
@@ -24,7 +29,7 @@ CREATE QUERY determineBloodPressure(VERTEX<HRA> hra) {
    diastolic = str_to_int(substring(h.BloodPressure,(instr(h.BloodPressure,"/"))+1,length(h.BloodPressure)))
   POST-ACCUM
   UINT bpstage=0,
-  
+
   CASE
       WHEN (systolic < 90) THEN bpstage = 0
       WHEN (systolic >= 90 AND systolic < 121) THEN bpstage = 1
@@ -33,7 +38,7 @@ CREATE QUERY determineBloodPressure(VERTEX<HRA> hra) {
       WHEN (systolic > 140 AND systolic < 180) THEN bpstage = 4
       WHEN (systolic >= 180) THEN bpstage = 5
     END,
-    
+
     INSERT INTO hasBloodPressure VALUES(h.id,bpstage,"BloodPressure", systolic, diastolic);
 
   PRINT systolic, diastolic, state;

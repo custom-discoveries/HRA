@@ -1,8 +1,12 @@
 CREATE QUERY determineVaccine(VERTEX<Vaccine> vaccine) {
 /**
-* Build out Vaccine Condition
+ Copyright (c) 2024, Custom Discoveries Inc.
+ All rights reserved.
 **/
 
+/**
+ Build out Vaccine Condition
+**/
   Start = {vaccine};
   /*
    * A person is less risky if they have had a COVID Vaccination

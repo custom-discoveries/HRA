@@ -1,5 +1,7 @@
 #
-DROP JOB ALL
+# Copyright (c) 2024, Custom Discoveries Inc.
+# All rights reserved.
+#
 USE Graph HRA_Graph
 set exit_on_error = "false"
 #

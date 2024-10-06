@@ -1,3 +1,9 @@
+#**************************************************************************************
+# Copyright (c) 2024, Custom Discoveries Inc.
+# All rights reserved.
+# CreateUserProfile.py - This application generates random user profile 
+#**************************************************************************************
+
 import random
 import pandas as pd
 
@@ -28,7 +34,7 @@ class PersonProfile:
             else:
                 gender_ = "Female"
                 first_name = self.fake.first_name_female()
-            
+
             birthdate = self.fake.date_of_birth(minimum_age=18, maximum_age=90)
             year=datetime.now().year
             age = year - birthdate.year
@@ -79,4 +85,3 @@ if __name__ == "__main__":
 ## Dataframe with Fake Data
     print(f"Number of Records Generated = {len(fake_data_df)}")
     fake_data_df.to_csv(profiler.output_filename, index=False )
-    

@@ -1,5 +1,10 @@
 CREATE QUERY calculateBodyMass(VERTEX<HRA> hra) {
 /**
+ Copyright (c) 2024, Custom Discoveries Inc.
+ All rights reserved.
+**/
+
+/**
 * Build out Body Mass Index
 **/
   INT id,height, weight, bmi;

@@ -1,3 +1,9 @@
+#!/bin/bash
+#******************************************************************************
+# Copyright (c) 2024, Custom Discoveries Inc.
+# All rights reserved.
+#installPythonEnvironment.sh: Bash shell seteup python3 Virtual Environment
+#******************************************************************************
 version=3.10
 echo "***************************************"
 echo "Installing Python Environment $version (.venv)"
@@ -8,4 +14,3 @@ python$version -m venv `pwd`/.venv
 source `pwd`/.venv/bin/activate
 pip install --upgrade pip
 pip install -U -r requirements.txt
-
