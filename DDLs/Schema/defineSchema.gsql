@@ -7,7 +7,7 @@ set exit_on_error = "false"
 #
 CREATE SCHEMA_CHANGE JOB HRA_Graph_Schema_Job FOR GRAPH HRA_Graph {
 
-  #color #1180f2 icon: person
+  #color #116df2 icon: person
   ADD VERTEX Person (PRIMARY_ID id UINT, firstName STRING, lastName STRING, gender STRING, birthdate DATETIME, age UINT, height UINT, weight UINT) WITH STATS="OUTDEGREE_BY_EDGETYPE", PRIMARY_ID_AS_ATTRIBUTE="true";
 
   #color #04a10f icon: book-1
